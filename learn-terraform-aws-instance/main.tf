@@ -18,13 +18,3 @@ provider "aws" {
   profile = "default"
   region  = "ap-south-1"
 }
-
-resource "aws_instance" "app_server" {
-  count         = var.instance_count
-  ami           = "ami-06a0b4e3b7eb7a300"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = var.instance_name
-  }
-}
