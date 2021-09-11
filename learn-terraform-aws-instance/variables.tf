@@ -3,3 +3,9 @@ variable "instance_name" {
   type        = string
   default     = "ExampleAppServerInstance"
 }
+
+variable "instance_count" {
+  description = "Number of instances to be spawned"
+  type        = number
+  default     = 1
+}
